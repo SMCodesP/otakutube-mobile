@@ -1,3 +1,4 @@
+import {FlatList} from 'react-native';
 import 'styled-components';
 
 declare module 'styled-components' {
@@ -14,5 +15,11 @@ declare module 'styled-components' {
     purple: string;
     red: string;
     yellow: string;
+  }
+}
+
+declare module 'styled-components/native' {
+  export interface StyledFlatList {
+    FlatList<T>(styles: any): new () => FlatList<T>;
   }
 }
